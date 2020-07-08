@@ -2,6 +2,7 @@ import React from "react";
 import ApiContext from "./ApiContext";
 import config from "./config";
 import ValidationError from './ValidationError';
+import PropTypes from "prop-types";
 import './AddNote.css'
 
 export default class AddNote extends React.Component {
@@ -126,3 +127,17 @@ export default class AddNote extends React.Component {
     );
   }
 }
+
+export default PostNote;
+
+PostNote.propTypes = {
+  name: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  folder: PropTypes.string.isRequired
+};
+
+PostNote.defaultProps = {
+  name: "Name must be entered",
+  content: "Content must be entered",
+  folder: "Folder must be entered"
+};
