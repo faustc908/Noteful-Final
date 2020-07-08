@@ -9,8 +9,8 @@ import { getNotesForFolder, findNote, findFolder } from "../notes-helpers";
 import ApiContext from "../ApiContext";
 import config from "../config";
 import "./App.css";
-import AddFolder from "../AddFolder";
-import AddNote from "../AddNote";
+import AddFolder from "../AddFolder/AddFolder";
+import AddNote from "../AddNote/AddNote";
 import NotefulError from "../NotefulError";
 
 class App extends Component {
