@@ -1,7 +1,7 @@
 import React from "react";
-import ApiContext from "./ApiContext";
-import config from './config';
-import ValidationError from './ValidationError'
+import ApiContext from "../ApiContext";
+import config from '../config';
+import ValidationError from '../ValidationError'
 import './AddFolder.css'
 
 export default class AddFolder extends React.Component {
