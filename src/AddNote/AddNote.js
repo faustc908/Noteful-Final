@@ -109,7 +109,7 @@ export default class AddNote extends React.Component {
                 onChange={e => this.updateName(e.target.value)}
               />
               <label htmlFor="folder">Folder:</label>
-              <select id="folder" onChange={e => this.updateFolderId(e.target.value)}>
+              <select id="folder" onChange={e => this.updateFolderId(e.target.value)} required>
                 <option value={null}>...</option>
                 {folders.map(folder => <option value={folder.id} key={folder.id}>{folder.name}</option>)}
               </select>
