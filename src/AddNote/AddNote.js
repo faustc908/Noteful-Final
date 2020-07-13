@@ -101,7 +101,7 @@ export default class AddNote extends React.Component {
             this.isNameValid(event);
           }}
         >
-          <div className='field'>
+          <div className='field' required>
             <label htmlFor='note-name-input'>Name</label>
             <input
               type='text'
@@ -123,7 +123,7 @@ export default class AddNote extends React.Component {
               }}
             />
           </div>
-          <div className='field'>
+          <div className='field' required>
             <label htmlFor='note-folder-select'>Folder</label>
             <select
               id='note-folder-select'
