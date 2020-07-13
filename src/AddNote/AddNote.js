@@ -1,7 +1,5 @@
 import React from "react";
 import ApiContext from "../ApiContext";
-import config from "../config";
-import ValidationError from '../ValidationError';
 import PropTypes from "prop-types";
 import './AddNote.css'
 import NotefulForm from '../NotefulForm/NotefulForm';
@@ -36,18 +34,18 @@ export default class AddNote extends React.Component {
         validationMessage: 'You must choose a valid folder.',
         idValid: false
       });
-    } else {
+    } else if (!this.state.content){
+      this.setState({
+        validationMessage: 'You must add content'
+      });
+    }
+    else {
       this.setState(
         {
           validationMessage: '',
           nameValid: true
-        },
-        () => {
-          this.handleAddNote();
-        }
-      );
-    }
-  };
+        });
+    }};
 
   handleAddNote = () => {
     const options = {
@@ -113,7 +111,7 @@ export default class AddNote extends React.Component {
             />
           </div>
           {!this.state.nameValid}
-          <div className='field'>
+          <div className='field' required>
             <label htmlFor='note-content-input'>Content</label>
             <textarea
               id='note-content-input'
@@ -164,4 +162,3 @@ AddNote.propTypes = {
   content: PropTypes.string,
   folder: PropTypes.string
 };
-
