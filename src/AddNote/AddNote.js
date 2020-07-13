@@ -55,7 +55,8 @@ export default class AddNote extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-        body: JSON.stringify({
+      body: JSON.stringify({
+        // id: cuid(),
         name: this.state.name,
         modified: new Date(),
         folderId: this.state.id,
@@ -111,11 +112,7 @@ export default class AddNote extends React.Component {
               }}
             />
           </div>
-          {!this.state.nameValid && (
-            <div>
-              <p>{this.state.validationMessage}</p>
-            </div>
-          )}
+          {!this.state.nameValid}
           <div className='field'>
             <label htmlFor='note-content-input'>Content</label>
             <textarea
@@ -167,5 +164,4 @@ AddNote.propTypes = {
   content: PropTypes.string,
   folder: PropTypes.string
 };
-
 
