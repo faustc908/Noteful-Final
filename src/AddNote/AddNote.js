@@ -45,10 +45,12 @@ export default class AddNote extends React.Component {
           validationMessage: '',
           nameValid: true
         },
-      () => {
+        () => {
           this.handleAddNote();
+        }
       );
-    }};
+    }
+  };
 
   handleAddNote = () => {
     const options = {
