@@ -76,7 +76,8 @@ export default class AddNote extends React.Component {
       })
       .then(res => res.json())
       .then(data => {
-        this.context.handleAddNote(data);
+       this.context.addNote(data);
+       this.props.history.push('/')
       })
       .catch(err => {
         this.setState({ error: err.message });
