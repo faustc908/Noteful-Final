@@ -3,6 +3,7 @@ import ApiContext from "../ApiContext";
 import PropTypes from "prop-types";
 import './AddNote.css'
 import NotefulForm from '../NotefulForm/NotefulForm';
+import config from "../config";
 
 export default class AddNote extends React.Component {
   constructor() {
