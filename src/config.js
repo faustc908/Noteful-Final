@@ -1,3 +1,3 @@
 export default {
-  API_ENDPOINT: 'http://localhost:9090'
+  API_ENDPOINT: "https://frozen-temple-41827.herokuapp.com",
 }
