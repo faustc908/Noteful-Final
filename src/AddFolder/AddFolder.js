@@ -34,7 +34,7 @@ export default class AddFolder extends React.Component {
     } 
     else {
       this.setState({ error: null })
-      fetch(`${config.API_ENDPOINT}/folders`, {
+      fetch(`${config.API_ENDPOINT}/api/folders`, {
         method: 'POST',
         body: JSON.stringify(newFolder),
         headers: {
