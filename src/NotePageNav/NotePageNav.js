@@ -46,7 +46,7 @@ export default class NotePageNav extends React.Component {
 
 NotePageNav.propTypes = {
   folder: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   })
 }
