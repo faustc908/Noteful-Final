@@ -49,7 +49,7 @@ export default class NoteListNav extends React.Component {
 
 NoteListNav.propTypes = {
   notes: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     modified: PropTypes.string,
   })),
