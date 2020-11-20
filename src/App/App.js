@@ -12,7 +12,7 @@ import "./App.css";
 import AddFolder from "../AddFolder/AddFolder";
 import AddNote from "../AddNote/AddNote";
 import NotefulError from "../NotefulError";
-
+// App.js
 class App extends Component {
   state = {
     notes: [],
